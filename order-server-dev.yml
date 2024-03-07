@@ -1,0 +1,14 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name:order-service
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring-cloud.client.ip.address}:${server.port}
+    
+name:
+  order-server-dev
